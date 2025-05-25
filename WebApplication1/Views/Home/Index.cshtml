@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Ввод данных о доноре (Red Cross Society)";
+}
+
+<h2>Ввод данных о доноре (Red Cross Society)</h2>
+<form asp-action="Index" method="post">
+    <div>
+        <label>Идентификатор донора (int, допускает null):</label>
+        <input type="number" name="id" />
+        <span style="color:gray; font-size:small;">Например: 123 (можно оставить пустым)</span>
+    </div>
+    <div>
+        <label>Имя:</label>
+        <input type="text" name="name" />
+        <span style="color:gray; font-size:small;">Например: Иван Иванов</span>
+    </div>
+    <div>
+        <label>Возраст:</label>
+        <input type="number" name="age" />
+        <span style="color:gray; font-size:small;">Например: 35</span>
+    </div>
+    <div>
+        <label>Группа крови:</label>
+        <input type="text" name="bloodGroup" />
+        <span style="color:gray; font-size:small;">Например: O(I) Rh+</span>
+    </div>
+    <div>
+        <label>Телефон:</label>
+        <input type="text" name="phone" />
+        <span style="color:gray; font-size:small;">Например: +7 900 123-45-67</span>
+    </div>
+    <div>
+        <label>Согласие на повторный вызов:</label>
+        <input type="checkbox" name="recall" value="true" />
+        <span style="color:gray; font-size:small;">Поставьте галочку, если согласны</span>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+
+<p style="color:gray;">Для теста фильтра авторизации добавьте к URL параметры ?param1=5&param2=1234567890</p>

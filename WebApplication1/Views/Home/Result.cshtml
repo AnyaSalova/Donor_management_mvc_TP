@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Результаты ввода (Red Cross Society)";
+}
+
+<h2>Введённые данные о доноре</h2>
+<ul>
+    <li>Идентификатор: @ViewBag.Id</li>
+    <li>Имя: @ViewBag.Name</li>
+    <li>Возраст: @ViewBag.Age</li>
+    <li>Группа крови: @ViewBag.BloodGroup</li>
+    <li>Телефон: @ViewBag.Phone</li>
+    <li>Согласие на повторный вызов: @(ViewBag.Recall == true ? "Да" : "Нет")</li>
+</ul>
+<a href="/Home/Index">Назад</a> 
